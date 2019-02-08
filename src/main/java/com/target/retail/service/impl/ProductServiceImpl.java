@@ -49,14 +49,6 @@ public class ProductServiceImpl implements ProductService {
 
 		// get the price entity
 		Price price = priceRepository.findByProductId(product.getId());
-		
-		// if there is no price present for this, then create a new one
-		if(price == null) {
-			price = new Price();
-			price.setId(1);
-			price.setProductId(product.getId());
-			price.setCurrencyCode("US");
-		}
 
 		// set the new price
 		price.setValue(product.getCurrent_price().getValue());
