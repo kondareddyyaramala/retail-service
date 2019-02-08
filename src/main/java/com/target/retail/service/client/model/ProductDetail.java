@@ -1,4 +1,4 @@
-package com.example.retail.service.client.model;
+package com.target.retail.service.client.model;
 
 public class ProductDetail {
 

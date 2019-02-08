@@ -1,6 +1,6 @@
-package com.example.retail.service.client;
+package com.target.retail.service.client;
 
-import com.example.retail.service.client.model.ProductDetail;
+import com.target.retail.service.client.model.ProductDetail;
 
 public interface ProductDetailServiceClient {
 

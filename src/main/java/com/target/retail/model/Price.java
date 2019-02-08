@@ -1,4 +1,4 @@
-package com.example.retail.model;
+package com.target.retail.model;
 
 import java.math.BigDecimal;
 

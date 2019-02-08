@@ -1,12 +1,12 @@
-package com.example.retail.service.client.impl;
+package com.target.retail.service.client.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.example.retail.service.client.ProductDetailServiceClient;
-import com.example.retail.service.client.model.ProductDetail;
+import com.target.retail.service.client.ProductDetailServiceClient;
+import com.target.retail.service.client.model.ProductDetail;
 
 @Service
 public class ProductDetailServiceClientImpl implements ProductDetailServiceClient {

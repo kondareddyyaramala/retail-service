@@ -1,4 +1,4 @@
-package com.example.retail.controller;
+package com.target.retail.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.retail.model.Product;
-import com.example.retail.service.ProductService;
+import com.target.retail.model.Product;
+import com.target.retail.service.ProductService;
 
 @RestController
 @RequestMapping("/")

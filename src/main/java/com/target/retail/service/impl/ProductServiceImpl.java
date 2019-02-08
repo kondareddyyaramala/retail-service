@@ -1,15 +1,15 @@
-package com.example.retail.service.impl;
+package com.target.retail.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.retail.converter.PriceEntityToPrice;
-import com.example.retail.converter.ProductDetailToProductConverter;
-import com.example.retail.entity.Price;
-import com.example.retail.model.Product;
-import com.example.retail.repository.PriceRepository;
-import com.example.retail.service.ProductService;
-import com.example.retail.service.client.ProductDetailServiceClient;
+import com.target.retail.converter.PriceEntityToPrice;
+import com.target.retail.converter.ProductDetailToProductConverter;
+import com.target.retail.entity.Price;
+import com.target.retail.model.Product;
+import com.target.retail.repository.PriceRepository;
+import com.target.retail.service.ProductService;
+import com.target.retail.service.client.ProductDetailServiceClient;
 
 @Service
 public class ProductServiceImpl implements ProductService {
