@@ -14,7 +14,7 @@ import com.example.retail.service.ProductService;
 @RestController
 @RequestMapping("/")
 public class ProductController {
-	private ProductService productService;
+	private final ProductService productService;
 
 	@Autowired
 	public ProductController(final ProductService productService) {

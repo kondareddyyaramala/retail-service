@@ -14,10 +14,10 @@ import com.example.retail.service.client.ProductDetailServiceClient;
 @Service
 public class ProductServiceImpl implements ProductService {
 
-	private ProductDetailServiceClient productDetailServiceClient;
-	private ProductDetailToProductConverter productDetailToProductConverter;
-	private PriceEntityToPrice priceEntityToPrice;
-	private PriceRepository priceRepository;
+	private final ProductDetailServiceClient productDetailServiceClient;
+	private final ProductDetailToProductConverter productDetailToProductConverter;
+	private final PriceEntityToPrice priceEntityToPrice;
+	private final PriceRepository priceRepository;
 
 	@Autowired
 	public ProductServiceImpl(final ProductDetailServiceClient productDetailServiceClient,
