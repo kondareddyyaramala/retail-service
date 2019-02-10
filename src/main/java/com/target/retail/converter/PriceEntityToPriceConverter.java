@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import com.target.retail.entity.Price;
 
 @Component
-public class PriceEntityToPrice implements Converter<Price, com.target.retail.model.Price> {
+public class PriceEntityToPriceConverter implements Converter<Price, com.target.retail.model.Price> {
 
 	@Override
 	public com.target.retail.model.Price convert(Price source) {

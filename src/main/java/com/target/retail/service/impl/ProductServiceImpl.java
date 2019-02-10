@@ -3,7 +3,7 @@ package com.target.retail.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.target.retail.converter.PriceEntityToPrice;
+import com.target.retail.converter.PriceEntityToPriceConverter;
 import com.target.retail.converter.ProductDetailToProductConverter;
 import com.target.retail.entity.Price;
 import com.target.retail.model.Product;
@@ -16,15 +16,15 @@ public class ProductServiceImpl implements ProductService {
 
 	private final ProductDetailServiceClient productDetailServiceClient;
 	private final ProductDetailToProductConverter productDetailToProductConverter;
-	private final PriceEntityToPrice priceEntityToPrice;
+	private final PriceEntityToPriceConverter priceEntityToPriceConverter;
 	private final PriceRepository priceRepository;
 
 	@Autowired
 	public ProductServiceImpl(final ProductDetailServiceClient productDetailServiceClient,
 			final ProductDetailToProductConverter productDetailToProductConverter,
-			final PriceRepository priceRepository, final PriceEntityToPrice priceEntityToPrice) {
+			final PriceRepository priceRepository, final PriceEntityToPriceConverter priceEntityToPriceConverter) {
 		this.priceRepository = priceRepository;
-		this.priceEntityToPrice = priceEntityToPrice;
+		this.priceEntityToPriceConverter = priceEntityToPriceConverter;
 		this.productDetailServiceClient = productDetailServiceClient;
 		this.productDetailToProductConverter = productDetailToProductConverter;
 	}
@@ -38,7 +38,7 @@ public class ProductServiceImpl implements ProductService {
 		Price price = priceRepository.findByProductId(id);
 
 		// convert the price and set it on the product
-		product.setCurrent_price(priceEntityToPrice.convert(price));
+		product.setCurrent_price(priceEntityToPriceConverter.convert(price));
 
 		return product;
 	}

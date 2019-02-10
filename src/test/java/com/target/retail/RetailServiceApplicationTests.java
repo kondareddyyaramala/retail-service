@@ -1,4 +1,4 @@
-package com.example.retailservice;
+package com.target.retail;
 
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
